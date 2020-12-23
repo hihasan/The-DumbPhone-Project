@@ -1,7 +1,8 @@
-package com.dumbphone.dumbphone;
+package com.dumbphone.dumbphone.views;
 
 import android.os.Bundle;
 
+import com.dumbphone.dumbphone.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
