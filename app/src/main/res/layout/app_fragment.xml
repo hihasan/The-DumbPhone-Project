@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/app_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:inputType="text"
+        android:layout_margin="@dimen/_8sdp"
+        android:hint="@string/search_app"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:background="@drawable/seacrh_edittext_background"
+        android:textColor="@color/persian_blue"
+        android:drawableLeft="@drawable/ic_baseline_search_24"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/app_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_search"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"/>
+</RelativeLayout>
