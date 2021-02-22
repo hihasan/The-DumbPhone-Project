@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.dumbphone.dumbphone.R;
 import com.dumbphone.dumbphone.model.AppModel;
@@ -20,6 +22,8 @@ import java.util.List;
 
 public class AppFragment extends BaseFragment {
     private View view;
+    private RecyclerView app_list;
+    private GridLayoutManager gridLayoutManager;
     private static final String TAG = AppFragment.class.getSimpleName();
 
 
@@ -41,7 +45,7 @@ public class AppFragment extends BaseFragment {
     }
 
     public void initViews(){
-
+        app_list = view.findViewById(R.id.app_list);
     }
 
     public void initListeners(){
@@ -58,11 +62,10 @@ public class AppFragment extends BaseFragment {
             }
             AppModel newInfo = new AppModel();
             Log.d(TAG, p.applicationInfo.loadLabel(getActivity().getPackageManager()).toString());
-//            newInfo.appname = ;
-//            newInfo.pname = p.packageName;
-//            newInfo.versionName = p.versionName;
-//            newInfo.versionCode = p.versionCode;
-//            newInfo.icon = p.applicationInfo.loadIcon(getActivity().getPackageManager());
+            newInfo.pname = p.packageName;
+            newInfo.versionName = p.versionName;
+            newInfo.versionCode = p.versionCode;
+            newInfo.icon = p.applicationInfo.loadIcon(getActivity().getPackageManager());
             res.add(newInfo);
         }
         return res;

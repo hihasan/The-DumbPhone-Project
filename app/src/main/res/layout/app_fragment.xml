@@ -16,11 +16,18 @@
         android:background="@drawable/seacrh_edittext_background"
         android:textColor="@color/persian_blue"
         android:drawableLeft="@drawable/ic_baseline_search_24"/>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/app_list"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/app_search"
         android:layout_marginLeft="@dimen/_8sdp"
-        android:layout_marginRight="@dimen/_8sdp"/>
+        android:layout_marginRight="@dimen/_8sdp"
+        android:background="#50a8dadc">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/app_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </RelativeLayout>
+
 </RelativeLayout>
